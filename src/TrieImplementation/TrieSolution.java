@@ -46,7 +46,7 @@ public class TrieSolution {
 		}
 		//Create root as empty char
 		Trie root= new Trie();
-		//Prevent the getPrefix to check for frequency==1 --> Exit;
+		//Prevent getPrefix to check for frequency==1 --> Exit;
 		root.frequency=2;
 		//Create Trie for all words
 		for (int i=0;i<words.size();i++) {

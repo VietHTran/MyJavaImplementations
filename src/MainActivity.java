@@ -1,25 +1,17 @@
 import java.*;
-import java.util.ArrayList;
+import java.util.*;
+import MathTheories.*;
 
-import TrieImplementation.*;
 public class MainActivity {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		TrieSolution sol= new TrieSolution();
-		//Generate test case
-		ArrayList<String> words= new ArrayList<String>();
-		words.add("harambe");
-		words.add("dixout");
-		words.add("harmony");
-		words.add("dixon");
-		words.add("dog");
-		words.add("duck");
-		words.add("zebra");
-		words.add("donkey");
-		ArrayList<String> res=sol.shortestUniquePrefix(words);
-		for (int i=0;i<res.size();i++) {
-			System.out.println(res.get(i));
-		}
+		Scanner s= new Scanner(System.in);
+		ModularExponentiation mE= new ModularExponentiation();
+		System.out.print("Base: ");
+		int a=s.nextInt();
+		System.out.print("Power: ");
+		int b=s.nextInt();
+		System.out.print("Modular: ");
+		int m=s.nextInt();
+		System.out.print("Result: "+mE.solution(a, b, m));
 	}
 }
