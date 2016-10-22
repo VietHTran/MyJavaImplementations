@@ -1,10 +1,12 @@
 package TrieImplementation;
 import java.util.*;
 public class Trie {
-	public ArrayList<Trie> child;
+	//Representing 256 characters in ASCII table
+	public static final int MAX=256;
+	public Trie[] child;
 	public int frequency;
 	public Trie() {
-		child = new ArrayList<Trie>();
+		child = new Trie[MAX];
 		frequency=1;
 	}
 }
