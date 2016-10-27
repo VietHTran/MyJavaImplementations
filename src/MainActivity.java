@@ -1,21 +1,16 @@
 import java.*;
 import java.util.*;
-import BitManipulation.*;
+import SegmentTree.*;
 
 public class MainActivity {
 	public static void main(String[] args) {
-		ArrayList<Integer> test= new ArrayList<Integer>();
-		test.add(2);
-		test.add(3);
-		test.add(4);
-		test.add(4);
-		test.add(3);
-		test.add(2);
-		test.add(3);
-		test.add(1);
-		test.add(2);
-		test.add(4);
-		//{2,3,4,4,3,2,3,1,2,4} expected result=1
-		System.out.println(BitManipulation.elementsAppearThrice(test));
+		Integer[] h={5,3,2,6,1,4};
+		Integer[] iF={0,1,2,0,3,2};
+		ArrayList<Integer> hL= new ArrayList<Integer> (Arrays.asList(h));
+		ArrayList<Integer> iFL= new ArrayList<Integer> (Arrays.asList(iF));
+		ArrayList<Integer> res=SegmentTreeSolution.OrderByPeopleHeights(hL,iFL);
+		for (int i=0;i<res.size();i++) {
+			System.out.println(res.get(i));
+		}
 	}
 }
