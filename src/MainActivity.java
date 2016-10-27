@@ -1,17 +1,21 @@
 import java.*;
 import java.util.*;
-import MathTheories.*;
+import BitManipulation.*;
 
 public class MainActivity {
 	public static void main(String[] args) {
-		Scanner s= new Scanner(System.in);
-		ModularExponentiation mE= new ModularExponentiation();
-		System.out.print("Base: ");
-		int a=s.nextInt();
-		System.out.print("Power: ");
-		int b=s.nextInt();
-		System.out.print("Modular: ");
-		int m=s.nextInt();
-		System.out.print("Result: "+mE.solution(a, b, m));
+		ArrayList<Integer> test= new ArrayList<Integer>();
+		test.add(2);
+		test.add(3);
+		test.add(4);
+		test.add(4);
+		test.add(3);
+		test.add(2);
+		test.add(3);
+		test.add(1);
+		test.add(2);
+		test.add(4);
+		//{2,3,4,4,3,2,3,1,2,4} expected result=1
+		System.out.println(BitManipulation.elementsAppearThrice(test));
 	}
 }
