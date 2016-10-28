@@ -3,6 +3,7 @@ import java.util.*;
 
 public class SegmentTreeSolution {
 	//Test if Tree is generated correctly
+	//<left> <parent> <right>
 	private static void testTree(SegmentTree node) {
 		if (node.left!=null) {
 			testTree(node.left);
