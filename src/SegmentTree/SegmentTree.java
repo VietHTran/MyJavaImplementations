@@ -1,8 +1,9 @@
 package SegmentTree;
 
 //Note about segment tree:
-//- Useful if mostly used for works with wide set of interval O(logn) time complexity
+//- Useful if mostly used for works with wide set of interval (query) O(logn) time complexity
 //- Not very useful when mainly used for update O(logn) time complexity
+//- Trade space for time improvement
 public class SegmentTree {
 	//l(left interval), r(right interval), m(middle index), val(value of Node)
 	int l,r,m,val;
