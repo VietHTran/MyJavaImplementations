@@ -17,7 +17,8 @@ public class MaxRectInBinaryMatrix {
 	    int max=0;
 	    int cur=0;
 	    ArrayList<Integer> holder=a.get(0);
-	    //Calculate the maximum area in the first area
+	    //Calculate the maximum area in the first row
+	    //In the example above --> max=3 (1 1 1)
 	    for (int i=0;i<holder.size();i++) {
 	        if (holder.get(i)==1) {
 	            cur++;
@@ -37,6 +38,10 @@ public class MaxRectInBinaryMatrix {
 	        //streak[i] store the continuous occurrence of 
 	        //columns that has number of 1s appear continuously 
 	        //from the rows above to the current row is >=i
+	        //In the example above
+	        //1 1 1
+	        //0 2 2
+	        //1 0 0
 	        int[] streak= new int[i+2];
 	        for (int k=0;k<holder.size();k++) {
 	            if (holder.get(k)==1) {
