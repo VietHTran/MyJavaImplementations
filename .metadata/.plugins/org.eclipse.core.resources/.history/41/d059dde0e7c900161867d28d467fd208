@@ -1,0 +1,24 @@
+package Map;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class IterableMap {
+	private HashMap map;
+	private ArrayList<Object> valueList;
+	private int index;
+	public IterableMap() {
+		map= new HashMap();
+		valueList=new ArrayList<Object>();
+		index=0;
+	}
+	public void put(Object key,Object value) {
+		map.put(key, value);
+		valueList.add(value);
+	}
+	public void remove(Object key) {
+		map.remove(key);
+		
+	}
+	
+}

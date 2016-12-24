@@ -1,0 +1,10 @@
+package Map;
+
+import java.util.HashMap;
+
+public class IterableMap {
+	private HashMap map;
+	public IterableMap() {
+		map= new HashMap();
+	}
+}

@@ -1,0 +1,55 @@
+package Map;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class IterableMap {
+	private HashMap map;
+	private ArrayList<Object> valueList;
+	private int index;
+	
+	public IterableMap() {
+		map= new HashMap();
+		valueList=new ArrayList<Object>();
+		index=0;
+	}
+	
+	public void put(Object key,Object value) {
+		map.put(key, value);
+		valueList.add(value);
+	}
+	
+	public void remove(Object key) {
+		valueList.remove(map.get(key));
+		if (index<=valueList.size()) index--;
+		map.remove(key);
+	}
+	
+	public Object get(Object key) {
+		return map.get(key);
+	}
+	
+	public boolean containsKey(Object key) {
+		return map.containsKey(key);
+	}
+
+	public Object get() throws IndexOutOfBoundsException {
+		if (valueList.size()==0) throw new IndexOutOfBoundsException();
+		return valueList.get(index);
+	}
+	
+	public void goToFirst() throws IndexOutOfBoundsException {
+		if (valueList.size()==0) throw new IndexOutOfBoundsException();
+		index=0;
+ 	}
+	
+	public void goToLast() throws IndexOutOfBoundsException {
+		if (valueList.size()==0) throw new IndexOutOfBoundsException();
+		index=valueList.size()-1;
+ 	}
+	
+	public boolean hasNext() {
+		if (valueList.size()==0||valueList.size()==index+1) return false;
+		return true;
+ 	}
+}

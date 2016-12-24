@@ -1,0 +1,15 @@
+package Map;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class IterableMap {
+	private HashMap map;
+	private ArrayList<Object> valueList;
+	private int index;
+	public IterableMap() {
+		map= new HashMap();
+		index=0;
+	}
+	
+}
