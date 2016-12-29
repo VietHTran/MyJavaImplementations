@@ -8,8 +8,8 @@ public class Main {
 		stack.push("mara");
 		stack.push("big");
 		do {
-			String holder=stack.peek();
-			stack.pop();
+			String holder=stack.pop();
+			//stack.pop();
 			System.out.println(holder);
 		} while (!stack.isEmpty());
 	}

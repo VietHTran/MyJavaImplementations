@@ -12,5 +12,6 @@ public class Main {
 			stack.pop();
 			System.out.println(holder);
 		} while (!stack.isEmpty());
+		
 	}
 }
