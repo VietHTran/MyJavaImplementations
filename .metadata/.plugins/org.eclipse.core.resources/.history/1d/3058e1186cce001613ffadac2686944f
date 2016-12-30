@@ -1,0 +1,16 @@
+import Map.*;
+import Stack.*;
+public class Main {
+
+	public static void main(String[] args) {
+		LightweightStack<String> stack = new LightweightStack<String>();
+		stack.push("ippo");
+		stack.push("mara");
+		stack.push("big");
+		do {
+			String holder=stack.peek();
+			stack.pop();
+			System.out.println(holder);
+		} while (!stack.isEmpty());
+	}
+}

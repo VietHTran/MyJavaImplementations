@@ -1,16 +1,17 @@
 import Map.*;
 import Stack.*;
+import Queue.*;
 public class Main {
 
 	public static void main(String[] args) {
-		LightweightStack<String> stack = new LightweightStack<String>();
-		stack.push("ippo");
-		stack.push("mara");
-		stack.push("big");
+		LightweightQueue<String> queue = new LightweightQueue<String>();
+		queue.push("takamura");
+		queue.push("was");
+		queue.push("here");
 		do {
-			String holder=stack.peek();
-			stack.pop();
+			String holder=queue.peek();
+			queue.pop();
 			System.out.println(holder);
-		} while (!stack.isEmpty());
+		} while (!queue.isEmpty());
 	}
 }
