@@ -1,8 +1,8 @@
 package Queue;
-
+import LinkedList.*;
 public class LightweightQueue<T> {
-	private LinkedElement<T> current;
-	private LinkedElement<T> tail;
+	private LinkedList<T> current;
+	private LinkedList<T> tail;
 
 	public LightweightQueue(){
 		current=null;
@@ -19,12 +19,12 @@ public class LightweightQueue<T> {
 	
 	public void push(T newElement) {
 		if (tail==null){
-			current=new LinkedElement<T>(newElement);
+			current=new LinkedList<T>(newElement);
 			tail=current;
 			return;
 		}
-		LinkedElement<T> holder=tail;
-		tail=new LinkedElement<T>(newElement);
+		LinkedList<T> holder=tail;
+		tail=new LinkedList<T>(newElement);
 		holder.setNext(tail);
 	}
 	
@@ -32,25 +32,5 @@ public class LightweightQueue<T> {
 		T holder=current.getCurrent();
 		current=current.getNext();
 		return holder;
-	}
-	
-	private class LinkedElement<T> {
-		private T current;
-		private LinkedElement<T> next;
-		public LinkedElement (T value) {
-			setCurrent(value);
-		}
-		public T getCurrent() {
-			return current;
-		}
-		public LinkedElement<T> getNext() {
-			return next;
-		}
-		public void setNext(LinkedElement<T> value) {
-			next=value;
-		}
-		public void setCurrent(T value) {
-			current =value;
-		}
 	}
 }
